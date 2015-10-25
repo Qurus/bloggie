@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'locomotivecms_wagon', '1.5.8'
-
+gem 'locomotive-heroku', '~> 0.1.0', :require => 'locomotive/heroku'
+gem 'thin', :group => 'production'
 group :development do
   # Mac OS X
   gem 'rb-fsevent', '~> 0.9.1', require: RUBY_PLATFORM.include?('darwin') && 'rb-fsevent'
