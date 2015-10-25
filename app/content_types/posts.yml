@@ -26,55 +26,53 @@ order_direction: desc
 # public_submission_accounts: ['john@example.com']
 
 # A list describing each field
-fields: 
+fields:
 - title: # The lowercase, underscored name of the field
     label: Title # Human readable name of the field
     type: string
     required: true
-    hint: Explanatory text displayed in the back office
-    localized: false
+    localized: true
 
 - posted_at: # The lowercase, underscored name of the field
-    label: true # Human readable name of the field
+    label: Posted at # Human readable name of the field
     type: date_time
-    required: false
-    hint: Explanatory text displayed in the back office
+    required: true
     localized: false
 
 - tags: # The lowercase, underscored name of the field
     label: Tags # Human readable name of the field
     type: tags
     required: false
-    hint: Explanatory text displayed in the back office
     localized: false
 
 - teaser: # The lowercase, underscored name of the field
     label: Teaser # Human readable name of the field
     type: text
-    required: false
-    hint: Explanatory text displayed in the back office
-    localized: false
+    required: true
+    hint: A short lead-in to the post displayed when listing posts
+    localized: true
     text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
 
 - featured_image: # The lowercase, underscored name of the field
     label: Featured image # Human readable name of the field
     type: file
     required: false
-    hint: Explanatory text displayed in the back office
+    hint: An image displayed next to the teaser when listing posts
     localized: false
 
 - body: # The lowercase, underscored name of the field
     label: Body # Human readable name of the field
     type: text
     required: false
-    hint: Explanatory text displayed in the back office
-    localized: false
+    hint: The full post text
+    localized: true
     text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
 
-- photos:
+- photos: # Name of the field
     label: Photos
-    hint: A description of the relationship for the editors
     type: has_many
-    class_name: photos
-    inverse_of: post
-    ui_enabled: true
+    required: false
+    localized: false
+    class_name: photos # Define the slug of the target content type (eg. comments)
+    inverse_of: post  # Define the name of the field referring to Tests in the target content type (eg. post)
+    ui_enabled: true # If you want to manage the entries of the relationship directly from the source entry
