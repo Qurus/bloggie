@@ -70,3 +70,11 @@ fields:
     hint: Explanatory text displayed in the back office
     localized: false
     text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
+
+- photos:
+    label: Photos
+    hint: A description of the relationship for the editors
+    type: has_many
+    class_name: photos
+    inverse_of: post
+    ui_enabled: true
