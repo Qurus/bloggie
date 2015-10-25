@@ -2,6 +2,10 @@
 title: Home
 published: true
 meta_keywords: uen media bloggie
+editable_elements:
+  'main/jumbotron_title': Life's to short not to get away for awhile!
+  'main/jumbotron_message': Learn about cool places to see abroad, interesting things to eat, and little travel tips you won't believe you lived without.
+  'main/jumbotron_button': Browse our articles
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -60,7 +64,7 @@ meta_keywords: uen media bloggie
         <div class="collapse navbar-collapse" id="main-nav">
           <ul class="nav navbar-nav">
             <li {% if page.slug == "index" %}class="active"{% endif %}>
-              <a href="/">Home</a>
+              <a href="/{{ locale }}">{{ 'home_page' | translate }}</a>
               {% nav "site", no_wrapper: true, active_class: "active" %}
             </li>
           </ul>
@@ -100,6 +104,7 @@ meta_keywords: uen media bloggie
     </a>
   </p>
 </div>
+
 {% endblock %}
 {% include 'footer' %}
     </div>

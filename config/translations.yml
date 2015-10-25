@@ -6,3 +6,16 @@
 # hello_world:
 #   en: Hello world !
 #   fr: Bonjour le monde !
+home_page:
+  en: Home
+  tr: Ana Sayfa
+
+read_more:
+  en: Read More
+  tr: Daha Fazla..
+
+en:
+  tr: English
+
+tr:
+  en: Türkce
