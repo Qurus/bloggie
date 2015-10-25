@@ -10,21 +10,21 @@ meta_keywords: uen media bloggie
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="keywords" content="{{ site.meta_keywords }} {{ page.meta_keywords }}">
+    <meta name="keywords" content="{{ site.meta_keywords | escape }} {{ page.meta_keywords | escape }}">
     {% if page.meta_description %}
-      <meta name="description" content="{{ page.meta_description }}">
+      <meta name="description" content="{{ page.meta_description | escape }}">
     {% else %}
-      <meta name="description" content="{{ site.meta_description }}">
+      <meta name="description" content="{{ site.meta_description | escape }}">
     {% endif %}
 
-    <title>
-      {{ page.title }} - {{ site.name }} |
-      {% if page.seo_title %}
-        {{ page.seo_title }}
-      {% else %}
-        {{ site.seo_title }}
-      {% endif %}
-    </title>
+   <title>
+  {{ page.title | escape }} - {{ site.name | escape }} |
+  {% if page.seo_title %}
+    {{ page.seo_title | escape }}
+  {% else %}
+    {{ site.seo_title | escape }}
+  {% endif %}
+  </title>
 
     {{ 'application.css' | stylesheet_tag }}
     {{ 'fonts.css' | stylesheet_tag }}
