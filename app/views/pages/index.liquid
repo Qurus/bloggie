@@ -60,6 +60,7 @@ meta_keywords: uen media bloggie
           <ul class="nav navbar-nav">
             <li {% if page.slug == "index" %}class="active"{% endif %}>
               <a href="/">Home</a>
+              {% nav "site", no_wrapper: true, active_class: "active" %}
             </li>
           </ul>
         </div>
@@ -71,7 +72,9 @@ meta_keywords: uen media bloggie
   <div class="row">
     <div class="col-md-10 col-md-offset-1 col-sm-12">
       <h2>{{ page.title }}</h2>
-      Coming Soon.
+      {% block 'main' %}
+    Coming Soon.
+{% endblock %}
     </div>
   </div>
 </div>
